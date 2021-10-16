@@ -1,5 +1,5 @@
 import http from 'k6/http';
-import { describe, expect, chai } from '../../k6-jslib-chaijs/build/k6chaijs.min.js';
+import { describe, expect, chai } from 'https://jslib.k6.io/k6chaijs/4.3.4.0/index.js';
 import { initContractPlugin } from '../build/k6chaijs-contract.min.js';
 
 import { crocodileListAPIcontract } from './api_contracts/contracts.js'

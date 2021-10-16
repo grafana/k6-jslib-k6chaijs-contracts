@@ -7,7 +7,7 @@ module.exports = {
   mode: 'production',
   entry: './src/index.js',
   output: {
-    filename: 'k6chaijs-contract.min.js',
+    filename: 'k6chaijs-contracts.min.js',
     path: path.resolve(__dirname, 'build'),
     libraryTarget: 'commonjs',
   },

@@ -1,4 +1,3 @@
-// import Ajv from 'https://jslib.k6.io/ajv/6.12.5/index.js';
 import Ajv from 'ajv';
 
 export function initContractPlugin(chai){
@@ -28,7 +27,7 @@ export function initContractPlugin(chai){
     , "expected to not not match the API schema"
     , null   // expected
     , null   // actual
-    );  
+    );
   });
   
 
