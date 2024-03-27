@@ -10,7 +10,7 @@
     "uglifyjs-webpack-plugin": "^2.2.0",
     "babel-loader": "^8.0.6",
     "chai": "4.3.4",
-    "webpack": "^4.31.0",
+    "webpack": "^4.47.0",
     "webpack-cli": "^3.3.2"
   },
   "engines": {},

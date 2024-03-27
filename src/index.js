@@ -1,3 +1,4 @@
+import { check } from 'k6';
 import Ajv from 'ajv';
 
 export function initContractPlugin(chai){
