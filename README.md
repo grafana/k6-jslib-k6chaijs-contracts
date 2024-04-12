@@ -47,5 +47,5 @@ npm run-script webpack
 
 #### Deploy new version
 1. Build.
-2. Use the `./build/k6chaijs-contract.min.js` to make a PR to [jslib.k6.io](https://github.com/grafana/jslib.k6.io). 
+2. Use the `./build/k6chaijs-contracts.min.js` to make a PR to [jslib.k6.io](https://github.com/grafana/jslib.k6.io). 
 3. Release version should follow the chaijs version. Currently `4.3.4.0`.
