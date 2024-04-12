@@ -1,4 +1,3 @@
-import { check } from 'k6';
 import Ajv from 'ajv';
 
 function check(condition, message) {
