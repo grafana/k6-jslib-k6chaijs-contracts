@@ -5,9 +5,9 @@
   "description": "Create a k6chaijs-contract build",
   "main": "src/index.js",
   "devDependencies": {
-    "@babel/core": "^7.4.4",
+    "@babel/core": "^7.29.7",
     "@babel/plugin-transform-block-scoping": "^7.14.1",
-    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-env": "^7.29.7",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "babel-loader": "^8.0.6",
     "chai": "4.3.4",
