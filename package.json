@@ -25,6 +25,6 @@
   "author": "k6 team",
   "license": "MIT",
   "dependencies": {
-    "ajv": "6.14.0"
+    "ajv": "6.15.0"
   }
 }
