@@ -1,7 +1,7 @@
 {
   "name": "k6-es6",
   "version": "1.0.0",
-  "packageManager": "npm@10.9.8",
+  "packageManager": "npm@11.17.0",
   "description": "Create a k6chaijs-contract build",
   "main": "src/index.js",
   "devDependencies": {
