@@ -8,11 +8,10 @@
     "@babel/core": "^7.29.7",
     "@babel/plugin-transform-block-scoping": "^7.14.1",
     "@babel/preset-env": "^7.29.7",
-    "uglifyjs-webpack-plugin": "^2.2.0",
-    "babel-loader": "^8.4.1",
+    "babel-loader": "^10.1.1",
     "chai": "4.5.0",
-    "webpack": "^4.47.0",
-    "webpack-cli": "^3.3.2"
+    "webpack": "^5.109.2",
+    "webpack-cli": "^7.2.2"
   },
   "engines": {},
   "scripts": {

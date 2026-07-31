@@ -1,7 +1,4 @@
-var webpack = require('webpack');
 var path = require('path');
-
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -22,18 +19,15 @@ module.exports = {
   stats: {
     colors: true,
   },
-  target: 'web',
+  // ['web', 'es5'] keeps webpack 5 from emitting ES6+ runtime helpers
+  // (arrow functions, const) so the bundle stays ES5.1, matching the
+  // output the previous webpack 4 + UglifyJS pipeline produced.
+  target: ['web', 'es5'],
   externals: /^(k6|https?\:\/\/)(\/.*)?/,
   devtool: 'source-map',
+  // webpack 5 minifies with TerserPlugin out of the box in production mode,
+  // so the explicit uglifyjs-webpack-plugin minimizer is no longer needed.
   optimization: {
-    minimizer: [
-      new UglifyJsPlugin({
-        uglifyOptions: {
-          output: {
-            comments: false
-          }
-        }
-      })
-    ]
-  }  
+    minimize: true,
+  },
 };
