@@ -1,7 +1,4 @@
-var webpack = require('webpack');
 var path = require('path');
-
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -22,18 +19,8 @@ module.exports = {
   stats: {
     colors: true,
   },
-  target: 'web',
+  // Keep webpack 5 runtime helpers compatible with the previous ES5 bundle.
+  target: ['web', 'es5'],
   externals: /^(k6|https?\:\/\/)(\/.*)?/,
   devtool: 'source-map',
-  optimization: {
-    minimizer: [
-      new UglifyJsPlugin({
-        uglifyOptions: {
-          output: {
-            comments: false
-          }
-        }
-      })
-    ]
-  }  
 };
