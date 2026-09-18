@@ -19,15 +19,8 @@ module.exports = {
   stats: {
     colors: true,
   },
-  // ['web', 'es5'] keeps webpack 5 from emitting ES6+ runtime helpers
-  // (arrow functions, const) so the bundle stays ES5.1, matching the
-  // output the previous webpack 4 + UglifyJS pipeline produced.
+  // Keep webpack 5 runtime helpers compatible with the previous ES5 bundle.
   target: ['web', 'es5'],
   externals: /^(k6|https?\:\/\/)(\/.*)?/,
   devtool: 'source-map',
-  // webpack 5 minifies with TerserPlugin out of the box in production mode,
-  // so the explicit uglifyjs-webpack-plugin minimizer is no longer needed.
-  optimization: {
-    minimize: true,
-  },
 };

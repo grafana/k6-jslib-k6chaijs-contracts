@@ -39,6 +39,8 @@ export default function testSuite() {
 
 ## Development 
 
+Node.js `^22.22.2 || ^24.15.0 || >=26.0.0` is required by the pinned npm 12 toolchain.
+
 #### Build
 ```
 npm install

@@ -13,7 +13,9 @@
     "webpack": "^5.109.2",
     "webpack-cli": "^7.2.2"
   },
-  "engines": {},
+  "engines": {
+    "node": "^22.22.2 || ^24.15.0 || >=26.0.0"
+  },
   "scripts": {
     "webpack": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
