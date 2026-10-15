@@ -1,4 +1,4 @@
-// json schema for https://test-api.k6.io/auth/token/login/
+// json schema for https://quickpizza.grafana.com/api/users/token/login
 
 export const tokenAuthRequestAPIcontract = {
   type: "object",
@@ -19,15 +19,11 @@ export const tokenAuthRequestAPIcontract = {
 export const tokenAuthResponseAPIcontract = {
   type: "object",
   properties: {
-    access: {
-      type: "string"
-    },
-    refresh: {
+    token: {
       type: "string"
     },
   },
   required: [
-    "access",
-    "refresh",
+    "token",
   ]
 };

@@ -11,7 +11,7 @@ import http from 'k6/http';
 import { describe, expect, chai } from 'https://jslib.k6.io/k6chaijs/4.3.4.0/index.js';
 import { initContractPlugin } from 'https://jslib.k6.io/k6chaijs-contracts/4.3.4.0/index.js';
 
-import { crocodileListAPIcontract } from './api_contracts/contracts.js'
+import { pizzaNamesAPIContract } from './api_contracts/contracts.js'
 
 export let options = {
   thresholds: {
@@ -24,12 +24,12 @@ initContractPlugin(chai)
 
 export default function testSuite() {
 
-  describe('[Crocs service] Fetch list of crocs', () => {
-    let response = http.get('https://test-api.k6.io/public/crocodiles');
+  describe('[Pizza service] Fetch list of pizza names', () => {
+    let response = http.get('https://quickpizza.grafana.com/api/names');
 
     expect(response.status, "response status").to.equal(200)
     expect(response).to.have.validJsonBody()
-    expect(response.json(), "Croc List schema").to.matchSchema(crocodileListAPIcontract)
+    expect(response.json(), "Pizza names schema").to.matchSchema(pizzaNamesAPIContract)
   })
 
 }
@@ -38,6 +38,12 @@ export default function testSuite() {
 ![CLI screenshot](./CLI-screenshot.png)
 
 ## Development 
+
+#### Test
+```
+npm test
+```
+Requires [k6](https://grafana.com/docs/k6/latest/set-up/install-k6/) and a fresh build.
 
 #### Build
 ```

@@ -17,7 +17,7 @@
   "engines": {},
   "scripts": {
     "webpack": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "k6 run tests/simple.js && k6 run tests/test.js"
   },
   "keywords": [
     "k6"
