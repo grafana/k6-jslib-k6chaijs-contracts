@@ -17,7 +17,7 @@ export function initContractPlugin(chai){
   
       validate.errors.forEach(error => {
         check(is_valid, {
-          [`${error.dataPath} ${error.message}`]: (is_valid) => is_valid
+          [`${error.instancePath} ${error.message}`]: (is_valid) => is_valid
         });
       });
     }

@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 var path = require('path');
 
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -27,9 +27,10 @@ module.exports = {
   devtool: 'source-map',
   optimization: {
     minimizer: [
-      new UglifyJsPlugin({
-        uglifyOptions: {
-          output: {
+      new TerserPlugin({
+        extractComments: false,
+        terserOptions: {
+          format: {
             comments: false
           }
         }
