@@ -5,7 +5,7 @@
   "description": "Create a k6chaijs-contract build",
   "main": "src/index.js",
   "devDependencies": {
-    "@babel/core": "8.1.0",
+    "@babel/core": "8.1.2",
     "@babel/plugin-transform-block-scoping": "8.0.10",
     "@babel/preset-env": "8.0.7",
     "babel-loader": "10.1.1",
